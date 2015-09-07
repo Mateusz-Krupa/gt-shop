@@ -1,0 +1,22 @@
+[
+  {
+    "id": 0,
+    "name": "all",
+    "imgSrc": "/assets/images/clothes.jpg"
+  },
+  {
+    "id": 1,
+    "name": "boots",
+    "imgSrc": "/assets/images/boots.jpg"
+  },
+  {
+    "id": 2,
+    "name": "pants",
+    "imgSrc": "assets/images/pants.jpg"
+  },
+  {
+    "id": 3,
+    "name": "dresses",
+    "imgSrc": "assets/images/dresses.jpg"
+  }
+]

@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "name": "Boots 3",
+    "category": "boots",
+    "price": 10,
+    "image": "jacket.png"
+  },
+  {
+    "id": 2,
+    "name": "Winter Pents",
+    "category": "pants",
+    "price": 12,
+    "image": "jacket.png"
+  },
+  {
+    "id": 3,
+    "name": "dresses 1",
+    "category": "dresses",
+    "price":30,
+    "image": "jacket.png"
+  },
+  {
+    "id": 4,
+    "name": "Boots 2",
+    "category": "boots",
+    "price": 18,
+    "image": "jacket.png"
+  },
+  {
+    "id": 5,
+    "name": "dress 2",
+    "category": "dresses",
+    "price": 20,
+    "image": "jacket.png"
+  },
+  {
+    "id": 6,
+    "name": "Boots 1",
+    "category": "boots",
+    "price": 25,
+    "image": "jacket.png"
+  },
+  {
+    "id": 7,
+    "name": "dress 12",
+    "category": "dresses",
+    "price": 10,
+    "image": "jacket.png"
+  },
+  {
+    "id": 8,
+    "name": "Winter Dress",
+    "category": "dress",
+    "price": 4,
+    "image": "jacket.png"
+  },
+  {
+    "id": 9,
+    "name": "dresses 123",
+    "category": "dresses",
+    "price": 9,
+    "image": "jacket.png"
+  },
+  {
+    "id": 10,
+    "name": "LEGGINGS",
+    "category": "pants",
+    "price": 15,
+    "image": "jacket.png"
+  },
+  {
+    "id": 11,
+    "name": "dresses 23",
+    "category": "dresses",
+    "price": 3,
+    "image": "jacket.png"
+  },
+  {
+    "id": 12,
+    "name": "dress 34",
+    "category": "dresses",
+    "price": 25,
+    "image": "jacket.png"
+  },
+  {
+    "id": 13,
+    "name": "Boots 23",
+    "category": "boots",
+    "price": 11,
+    "image": "jacket.png"
+  },
+  {
+    "id": 14,
+    "name": "dresses 45",
+    "category": "dresses",
+    "price": 22,
+    "image": "jacket.png"
+  },
+  {
+    "id": 15,
+    "name": "dresses 456",
+    "category": "dresses",
+    "price": 3,
+    "image": "jacket.png"
+  }
+]

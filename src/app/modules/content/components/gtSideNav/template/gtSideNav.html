@@ -1,0 +1,13 @@
+<md-sidenav md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')" class="md-whiteframe-z2">
+  <md-subheader class="md-no-sticky">Category:</md-subheader>
+  <md-list layout="column">
+    <md-item ng-repeat="item in vm.categories track by item.id" ng-click="vm.setActive(item.name)">
+      <md-button class="categoryBtn"  aria-label="{{::item.name}}" ng-class="{'md-raised md-accent': (item.name === vm.active)}" ui-sref="home({category: item.name})">
+        <img ng-src="{{::item.imgSrc}}" class="avatar"/>
+        <span ng-bind="::item.name"></span>
+        {{vm.active.name}}
+        </div>
+      </md-button>
+    </md-item>
+  </md-list>
+</md-sidenav>

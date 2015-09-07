@@ -1,0 +1,51 @@
+<md-content class="content md-padding" ui-view flex>
+  <section class="basketContainer" ng-if="!vm.isEmpty(vm.items)">
+    <h1 ng-if="!vm.submitted">Basket</h1>
+    <h1 ng-if="vm.submitted">Invoice nr: {{vm.invoiceNumber}}</h1>
+    <md-list class="basket-list">
+      <md-list-item class="m-listHeader">
+        <span flex="20"> Product Name </span>
+        <span flex="10" class="basket-list-item">Category </span>
+        <span flex="20" class="basket-list-item">Price </span>
+        <span flex="10" class="basket-list-item">Quantity</span>
+        <span flex="20" class="basket-list-item"> Total Price</span>
+        <span flex="20" class="basket-list-item" ng-hide="vm.submitted">Actions</span>
+      </md-list-item>
+      <md-list-item ng-repeat="item in vm.items track by item.id" class="md-no-proxy">
+        <span flex="20" ng-bind="::item.name"></span>
+        <span flex="10" class="basket-list-item" ng-bind="::item.category"> </span>
+        <span flex="20" class="basket-list-item" ng-bind="::item.price | currency: '$'"></span>
+        <span flex="10" class="basket-list-item">
+          <md-input-container class="m-noPadding">
+            <input ng-model="item.quantity" class="m-center" aria-label="set quantity" type="number" min="1" ng-if="!vm.submitted"/>
+            <span ng-if="vm.submitted" ng-bind="::item.quantity"> </span>
+          </md-input-container>
+        </span>
+        <span flex="20" class="basket-list-item">
+          {{item.price * item.quantity | currency: '$'}}
+        </span>
+        <span flex="20" class="basket-list-item" ng-hide="vm.submitted">
+          <md-button class="md-raised md-warn" ng-click="vm.GtBasketService.removeItem(item.id)" aria-label="Remove">Remove</md-button>
+        </span>
+      </md-list-item>
+    </md-list>
+
+    <p> Price: <span class="basket-price" ng-bind="vm.totalPrice | currency: '$'"></span>,
+        <span ng-show="vm.discount">Discount:
+          <span  class="basket-price" ng-bind="vm.discount | currency: '$'"> </span>
+        </span>
+    </p>
+
+    <p> Total quantity: <span class="basket-price" ng-bind="vm.totalQuantity"> </span></p>
+
+    <p class="basket-btnWrapper" ng-if="!vm.submitted">
+      <md-button class="md-raised md-accent" aria-label="Submit" ui-sref="invoice">Submit</md-button>
+    </p>
+  </section>
+  <section ng-if="vm.isEmpty(vm.items)" class="basket-noItems">
+    Sorry, no items in basket
+    <p>
+      <md-button class="md-raised md-warn" ui-sref="home" aria-label="Go home">GO back</md-button>
+    </p>
+  </section>
+</md-content>

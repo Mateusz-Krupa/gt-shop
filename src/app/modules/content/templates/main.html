@@ -1,0 +1,20 @@
+<!--Category side navigation-->
+<gt-side-nav layout="row">
+</gt-side-nav>
+<md-content class="content" ui-view flex>
+  <div flex class="productBox">
+    <md-grid-list
+      md-cols-sm="1" md-cols-md="2" md-cols-gt-md="6"
+      md-row-height-gt-md="1:1" md-row-height="4:3"
+      md-gutter="8px" md-gutter-gt-sm="4px">
+      <md-grid-tile ng-repeat="tile in vm.products | filter: vm.activeCategory"
+                    md-rowspan="{{tile.span.row}}"
+                    md-colspan="{{tile.span.col}}"
+                    md-colspan-sm="1"
+                    ng-class="tile.background">
+        <md-grid-tile-footer><h3>{{tile.item.name}} <span flex></span>{{tile.item.price | currency: '$'}}</h3></md-grid-tile-footer>
+        <md-button class="md-fab" ng-click="vm.addToBasket(tile.item)">Add</md-button>
+      </md-grid-tile>
+    </md-grid-list>
+  </div>
+</md-content>
